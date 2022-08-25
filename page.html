@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+
+  Hello, World!
+
+  <!-- create an element to serve as the root element for the react application -->
+  <div id ="myApp">
+  </div>
+
+  <!--load custom script with react component -->
+  <!-- use babel to translate JSX into pure JS-->
+  <script type="text/babel">
+    "use strict";
+
+    // define a react page component using JSX
+    function ProjectList(props) {
+      console.log(props);
+      //return some output
+      return <div> 
+              <ol>
+                {
+                  // use map() to loop through array
+                  props.list.map(
+                    // copy current array val into local params
+                    // JSX is bad and requires us to use round parenthesis instead of the usual 
+                    // curly brackets when defining js functions
+                    (item,index) => (
+                      <li key={index}> 
+                        <a href={item.link}>
+                          {item.firstname}
+                        </a>
+                      </li>
+                    )
+                  )
+                }
+              </ol>
+             </div>;
+    }
+
+    // use jQuery to load the JSON data from our server
+    $.getJSON(
+      'x', // url for jquery to ask for json from
+      function(jsonFromJquery) {
+        // after JSON loaded, call react createRoot() to identify root HTML element for app
+        const myRoot = ReactDOM.createRoot( document.getElementById('myApp') );
+        // call react render() to output JSX component into existing root element
+        myRoot.render(
+          <ProjectList list={jsonFromJquery} />
+        );
+      }
+    )
+    
+  </script>
+  
+</body>
+</html>
