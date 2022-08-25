@@ -1,0 +1,22 @@
+[
+  {
+    "name":"Canvas",
+    "link":"https://canvas.santarosa.edu/"
+  },
+  {
+    "name":"Repl",
+    "link":"https://replit.com/"
+  },
+  {
+    "name":"Github",
+    "link":"https://github.com/"
+  },
+  {
+    "name":"Mozilla Developer Network",
+    "link":"https://developer.mozilla.org/"
+  },
+  {
+    "name":"W3Schools",
+    "link":"https://www.w3schools.com"
+  }
+]

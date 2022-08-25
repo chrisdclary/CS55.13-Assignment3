@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>CS55.13 Resources</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin></script>
   <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom/umd/react-dom.development.js" crossorigin></script>
@@ -12,7 +12,7 @@
 </head>
 <body>
 
-  Hello, World!
+  <h2>Here are some essential resources to succeed in CS 55.13</h2>
 
   <!-- create an element to serve as the root element for the react application -->
   <div id ="myApp">
@@ -23,28 +23,28 @@
   <script type="text/babel">
     "use strict";
 
-    // define a react page component using JSX
-    function ProjectList(props) {
-      console.log(props);
-      //return some output
+    // define a react component using JSX
+    function ResourceList(resources) {
+      console.log(resources);
+      // output the JSON neatly
       return <div> 
-              <ol>
+              <ul>
                 {
                   // use map() to loop through array
-                  props.list.map(
+                  resources.list.map(
                     // copy current array val into local params
                     // JSX is bad and requires us to use round parenthesis instead of the usual 
                     // curly brackets when defining js functions
-                    (item,index) => (
+                    (item, index) => (
                       <li key={index}> 
-                        <a href={item.link}>
-                          {item.firstname}
+                        <a href={item.link} target="_blank">
+                          {item.name}
                         </a>
                       </li>
                     )
                   )
                 }
-              </ol>
+              </ul>
              </div>;
     }
 
@@ -56,7 +56,7 @@
         const myRoot = ReactDOM.createRoot( document.getElementById('myApp') );
         // call react render() to output JSX component into existing root element
         myRoot.render(
-          <ProjectList list={jsonFromJquery} />
+          <ResourceList list={jsonFromJquery} />
         );
       }
     )

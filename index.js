@@ -8,7 +8,7 @@ const requestListener = function(req, res) {
   console.log(req.url);
 
   if (req.url === "/") {
-    fs.readFile( __dirname + '/page.html' ).then(
+    fs.readFile( __dirname + '/app.html' ).then(
       contents => {
         // set http response header entry
         res.setHeader("Content-Type", "text/html; charset=UTF-8");
@@ -19,7 +19,7 @@ const requestListener = function(req, res) {
       }
     );
   } else {
-    fs.readFile( __dirname + "/data.json").then(
+    fs.readFile( __dirname + "/resources.json").then(
       contents => {
         //set http response header entry
         res.setHeader("Content-Type", "application/json; charset=UTF-8");
