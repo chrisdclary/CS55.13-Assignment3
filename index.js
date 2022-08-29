@@ -35,7 +35,7 @@ const requestListener = function(req, res) {
 // create instance of http server
 const server = http.createServer(requestListener);
 
-// define TCP port and IP address for our server to listen on
+// define IP address and TCP port for our server to listen on
 const host = "0.0.0.0";
 const port = "8080";
 

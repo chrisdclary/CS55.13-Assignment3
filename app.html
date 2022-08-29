@@ -37,8 +37,8 @@
                     // curly brackets when defining js functions
                     (item, index) => (
                       <li key={index}> 
-                        <a href={item.link} target="_blank">
-                          {item.name}
+                        <a href={item.address} target="_blank" rel="noopener noreferrer">
+                          {item.site}
                         </a>
                       </li>
                     )
@@ -50,7 +50,7 @@
 
     // use jQuery to load the JSON data from our server
     $.getJSON(
-      'x', // url for jquery to ask for json from
+      'json', // url for jquery to ask for json from
       function(jsonFromJquery) {
         // after JSON loaded, call react createRoot() to identify root HTML element for app
         const myRoot = ReactDOM.createRoot( document.getElementById('myApp') );

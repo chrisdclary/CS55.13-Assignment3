@@ -1,22 +1,38 @@
 [
   {
-    "name":"Canvas",
-    "link":"https://canvas.santarosa.edu/"
+  "site":"GitHub",
+  "address":"https://github.com/"
   },
   {
-    "name":"Repl",
-    "link":"https://replit.com/"
+  "site":"Repl.it IDE",
+  "address":"https://replit.com/"
   },
   {
-    "name":"Github",
-    "link":"https://github.com/"
+  "site":"MDN: JavaScript",
+  "address":"https://developer.mozilla.org/en-US/docs/Web/JavaScript"
   },
   {
-    "name":"Mozilla Developer Network",
-    "link":"https://developer.mozilla.org/"
+  "site":"Node.js Server-Side JavaScript Runtime Project Site",
+  "address":"https://nodejs.org/"
   },
   {
-    "name":"W3Schools",
-    "link":"https://www.w3schools.com"
+  "site":"React",
+  "address":"https://reactjs.org/"
+  },
+  {
+  "site":"Babel JavaScript Transpiler",
+  "address":"https://babeljs.io/"
+  },
+  {
+  "site":"Node Package Manager (npm)",
+  "address":"https://www.npmjs.com/"
+  },
+  {
+  "site":"MDN: HTTP Headers",
+  "address":"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers"
+  },
+  {
+  "site":"MDN: JavaScript Promises",
+  "address":"https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
   }
 ]
